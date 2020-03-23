@@ -1,0 +1,455 @@
+.quickview__container {
+  display: block;
+}
+
+.quickview--inactive {
+  right: -600px;
+}
+
+.quickview--active {
+  right: 0;
+}
+
+.quickview {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 600px;
+  max-width: 90%;
+  padding: 25px;
+  background-color: white;
+  z-index: 9999;
+  overflow-y: scroll;
+  -webkit-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.quickview > svg {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  color: #666666;
+}
+
+.quickview .quickview__swiper-container,
+.quickview .quickview__swiper-container img {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  display: block;
+  position: relative;
+}
+
+.quickview .quickview__swiper-container .button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 30px;
+  height: 70px;
+  color: #666666;
+  opacity: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.quickview .quickview__swiper-container:hover .button {
+  opacity: 0.4;
+}
+
+.quickview .quickview__swiper-container .button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 1;
+}
+
+.quickview .quickview__swiper-container .button-left {
+  left: 0;
+}
+
+.quickview .quickview__swiper-container .button-right {
+  right: 0;
+}
+
+.quickview .quickview__basic-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 30px 0 10px;
+}
+
+.quickview .quickview__basic-info a {
+  display: block;
+  font-size: 26px;
+  padding: 5px 0px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 900;
+  width: 100%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.quickview .quickview__basic-info a:hover {
+  color: #f86b6a;
+}
+
+.quickview .quickview__basic-info .quickview_rating {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.quickview .quickview__basic-info .quickview_rating--full {
+  color: #ff9c01;
+}
+
+.quickview .quickview__basic-info p {
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.quickview .quickview__basic-info p.discount {
+  color: #aaaaaa;
+  text-decoration: line-through;
+  padding-right: 10px;
+}
+
+.quickview .quickview__basic-info > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.quickview .quickview__description p {
+  width: 100%;
+  text-align: justify;
+  color: #777777;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.quickview .quickview__option {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.quickview .quickview__option--color,
+.quickview .quickview__option--size {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-bottom: 15px;
+}
+
+.quickview .quickview__option--color p,
+.quickview .quickview__option--size p {
+  padding: 5px 0;
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.quickview .quickview__option--color > p,
+.quickview .quickview__option--size > p {
+  width: 92px;
+}
+
+.quickview .quickview__option--color > div,
+.quickview .quickview__option--size > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.quickview .quickview__option .quickview__clear-button {
+  width: 100%;
+  max-width: 280px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.quickview .quickview__option .quickview__clear-button p {
+  cursor: pointer;
+  font-size: 12px;
+  color: #555555;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.quickview .quickview__option .quickview__clear-button p:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.quickview__button {
+  width: 100%;
+}
+
+.quickview__button > div:first-child {
+  max-width: 280px;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.quickview__button > div:first-child > input[type='number'] {
+  border: 1px solid #ccc;
+  padding: 8px 0;
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  color: red;
+  outline: none;
+  cursor: default;
+  font-weight: bold;
+}
+
+.quickview__button > div:first-child > input::-webkit-outer-spin-button,
+.quickview__button > div:first-child > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quickview__button > div:first-child > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.quickview__button > div:first-child > div input {
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid #ccc;
+  padding: 0;
+  width: 21px;
+  line-height: 16px;
+  text-align: center;
+  overflow: hidden;
+  outline: none;
+}
+
+.quickview__button .quickview__add-cart,
+.quickview__button .quickview__buy-now {
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.quickview__button .quickview__add-cart {
+  margin-left: 5px;
+  background-color: #f86b6a;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.quickview__button .quickview__buy-now {
+  width: 100%;
+  max-width: 280px;
+  background-color: #79b530;
+  margin-top: 15px;
+  height: 40px;
+  line-height: 11px;
+}
+
+.quickview__button .quickview__add-cart:hover,
+.quickview__button .quickview__buy-now:hover {
+  opacity: 0.7;
+}
+
+.quickview .quickview__tag {
+  width: 100%;
+  margin: 30px 0 15px;
+}
+
+.quickview .quickview__tag p {
+  width: 100%;
+  color: #333333;
+  margin: 0;
+  padding: 3px 0;
+  font-size: 15px;
+  cursor: default;
+}
+
+.quickview .quickview__tag span {
+  color: #555555;
+}
+
+.quickview .quickview__tag span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.quickview .quickview__icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+
+.quickview .quickview__icon svg {
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #888888;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.quickview .quickview__icon svg:hover {
+  color: #333333;
+}
+
+/* CheckButton Class Style */
+.quickview__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px 10px;
+  cursor: pointer;
+}
+
+.quickview__button-wrapper .quickview__button {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px;
+  opacity: 0.4;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.quickview__button-wrapper .quickview__button--active {
+  opacity: 1;
+}
+
+.quickview__button-wrapper .quickview__button-has-label {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,56 @@
+.wrapperRecent,
+.wrapperScroll {
+  cursor: pointer;
+  position: fixed;
+  background-color: #f76b6a;
+  z-index: 30;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.wrapperRecent {
+  bottom: 20px;
+}
+
+.wrapperScroll {
+  bottom: 80px;
+}
+
+.wrapperRecent:hover,
+.wrapperScroll:hover {
+  opacity: 1;
+}
+
+.wrapperRecent svg,
+.wrapperScroll svg {
+  width: 50%;
+  height: 50%;
+  color: white;
+}
+
+.wrapperScroll_hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapperScroll,
+  .wrapperRecent {
+    width: 30px;
+    height: 30px;
+  }
+  .wrapperRecent {
+    bottom: 15px;
+  }
+  .wrapperScroll {
+    bottom: 60px;
+  }
+}

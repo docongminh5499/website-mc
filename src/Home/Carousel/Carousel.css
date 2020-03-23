@@ -1,0 +1,130 @@
+:root {
+  --first-text-font-size: 1.5vw;
+  --second-text-font-size: 4.5vw;
+  --button-font-size: 1.2vw;
+  --control-button-font-size: 3.08vw;
+}
+
+.carousel__container {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__main > div > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 52%;
+  height: 98%;
+  height: calc(100% - 5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel__main > div > div > div > p:first-of-type {
+  width: 100%;
+  font-size: var(--first-text-font-size);
+  font-weight: bold;
+  color: #666666;
+  letter-spacing: 0.62em;
+  padding: 0.36em 4em;
+  cursor: default;
+}
+
+.carousel__main > div > div > div > p:nth-of-type(2) {
+  font-size: var(--second-text-font-size);
+  font-weight: 800;
+  color: #333333;
+  width: 100%;
+  padding: 0.12em 1.3em;
+  cursor: default;
+}
+
+.carousel__main > div > div > div > input {
+  font-family: 'Montserrat';
+  font-size: var(--button-font-size);
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  background-color: #f76b6a;
+  color: white;
+  margin-left: 5em;
+  margin-top: 0.83em;
+  border: none;
+  padding: 0.83em 2.5em;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.carousel__main > div > div > div > input:hover {
+  background-color: #f88887;
+}
+
+.carousel__main img {
+  margin-left: -30%;
+  width: 160%;
+}
+
+.carousel__control {
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  font-size: var(--control-button-font-size);
+  height: 2.5em;
+  top: 47%;
+  top: calc(50% - 1.25em);
+  color: #333333;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.carousel__control:hover {
+  opacity: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel__control--left {
+  left: 0;
+}
+
+.carousel__control--right {
+  right: 0;
+}
+
+.carousel__pagination span.swiper-pagination-bullet-active {
+  background-color: #f76b6a;
+  width: 30px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1360px) {
+  :root {
+    --first-text-font-size: 20px;
+    --second-text-font-size: 61.5px;
+    --button-font-size: 16.5px;
+    --control-button-font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .carousel__container {
+    margin: 10px 0 0;
+  }
+}

@@ -1,0 +1,105 @@
+.brand__for-container {
+  width: 100%;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.brand__for-container > div {
+  cursor: pointer;
+  width: 50%;
+  position: relative;
+  background-size: 100% 100%;
+  margin: 0 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.brand__for-container > div::before {
+  content: '';
+  display: block;
+  padding-top: 30%;
+}
+
+.brand__for-container > div:first-child {
+  background-image: url('/img/h2-banner1-2.jpg');
+}
+
+.brand__for-container > div:first-child:hover {
+  background-size: 102% 102%;
+}
+
+.brand__for-container > div:nth-child(2) {
+  background-image: url('/img/h2-banner21.jpg');
+  color: white;
+}
+
+.brand__for-container > div:nth-child(2):hover {
+  opacity: 0.8;
+}
+
+.brand__for-container > div > div {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 90%;
+  width: calc(100% - 40px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-size: 45px;
+  font-size: clamp(40px, calc(40px + 10 * (100vw - 850px) / 450), 50px);
+}
+
+.brand__for-container > div:first-child > div > h3 {
+  color: #333333;
+  font-size: 0.7em;
+}
+
+.brand__for-container > div:first-child > div > h5 {
+  color: #999999;
+  font-size: 0.4em;
+}
+
+.brand__for-container > div:nth-child(2) > div > h3 {
+  font-size: 0.55em;
+}
+
+.brand__for-container > div:nth-child(2) > div > h5 {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 850px) {
+  .brand__for-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .brand__for-container > div {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .brand__for-container > div > div {
+    font-size: 45px;
+    font-size: clamp(30px, calc(30px + 30 * (100vw - 300px) / 550), 60px);
+  }
+}
